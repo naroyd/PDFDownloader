@@ -1,0 +1,23 @@
+{
+    "name": "PDFDownloader",
+    "description": "The extension downloads files in pdf format, to which download access is prohibited.",
+    "version": "1.0.0",
+    "version_name": "1.0.0 release",
+    "manifest_version": 3,
+    "action": {
+      "default_popup":"index.html",
+      "default_icon": {
+        "16": "/source/icons/16.png",
+        "32": "/source/icons/32.png",
+        "48": "/source/icons/48.png",
+        "128": "/source/icons/128.png"
+      }
+    },
+    "icons": {
+      "16": "/source/icons/16.png",
+      "32": "/source/icons/32.png",
+      "48": "/source/icons/48.png",
+      "128": "/source/icons/128.png"
+    },
+    "permissions": ["activeTab", "scripting", "storage"]
+}

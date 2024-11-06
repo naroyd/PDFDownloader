@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'VelaSans';
+    src: url('source/fonts/VelaSans-GX.ttf');
+}
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('source/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+.status-img{
+    z-index: -1;
+    position: absolute;
+    top:0px;
+    left:-32px;
+}
+
+#book-format{
+    display:none;
+}
+body{
+    width: 400px;
+    background-color: #262626;
+    color: white;
+    font-family: 'VelaSans';
+    text-align: center;
+    font-weight: 200;
+    padding: 16px;
+    margin: auto 0;
+    font-size: 12pt;
+    user-select: none;
+}
+p, h2{
+    margin: auto 0;
+}
+h2{
+    font-weight: 500;
+    font-size: 14pt;
+}
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+}
+.header{
+  font-family: "SpaceGrotesk";
+  font-optical-sizing: auto;
+  font-size: 16pt;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+.info{
+    text-align: left;
+    margin-bottom: 12px;
+}
+.attention, .warning{padding: 16px 20px; border-radius: 8px;display: none;}
+.attention{
+    background-color: #25324a;
+}
+.warning{
+    background-color: #443e2b;
+}
+.parse-text, .download-text, .reload-text, .wait-text, .cancel-text{
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 16px;
+}
+.parse-text{
+    color: #F24848;
+}
+.wait-text{
+    color:#7D7D7D;
+}
+.download-text{
+    color:#94E98D;
+}
+.reload, .cancel{
+    color: white;
+}
+.parse-icon, .download-icon, .reload-icon, .wait-icon, .cancel-icon{
+    display: inline-block;
+    vertical-align: top;
+    transform: translateY(-1px);
+}
+.parse, .download, .reload, .wait, .cancel{
+    border-radius: 8px;
+    padding: 6px 0;
+    width: 230px;
+    display: none;
+    height: 14px;
+    margin-bottom: 16px;
+    cursor:pointer;
+    position: relative;
+    overflow: hidden;
+}
+.parse{
+    border: 2px solid #f24848;
+}
+.wait{
+    border: 2px solid #7D7D7D;
+    cursor: auto;
+    margin-bottom: 6px;
+}
+.download{
+    border: 2px solid #94E98D;
+    margin-bottom: 6px;
+}
+.reload, .cancel{
+    border: 2px solid white;
+}
+.status-text{
+    margin-bottom: 20px;
+}
+.attention-img, .warning-img{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+.attention-header-text, .warning-header-text{
+    display: inline-block;
+    font-size: 14pt;
+    line-height: 20px;
+    transform: translateY(-3px);
+}
+.attention-header, .warning-header{
+    display: inline-block;
+    height: 20px;
+}
+.advanced-header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #909090;
+    font-weight: 500;
+    font-size: 10pt;
+    padding: 0;
+}
+.advanced-header::before,
+.advanced-header::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #909090;
+}
+
+.advanced-header:not(:empty)::before {
+  margin-right: 8px;
+}
+
+.advanced-header:not(:empty)::after {
+  margin-left: 8px;
+}
+.advanced{
+    display: none;
+    font-weight: 400;
+    text-align: left;
+}
+.option{
+    margin:12px;
+    height: 30px;
+}
+
+input{
+    color: white;
+    background-color: #262626;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 4px 10px;
+    text-align: center;
+    font-family: "VelaSans";
+    font-weight: 400;
+    width: 46px;
+    display: inline-block;
+}
+
+input:focus{
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.switch-toggle{
+    height: 10px;
+    width: 26px;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 3px;
+    cursor: pointer;
+    transform: translateY(5px);
+}
+.toggle{
+    height: 6px;
+    width: 6px;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+.compress-variants{
+    display: inline-block;
+    width:160px;
+    height: 22px;
+}
+.compress-settings{
+    display: none;
+    text-align: center;
+}
+.compress0{
+    display: block;
+}
+.option-value{
+    display: inline-block;
+    float: right;
+}
+.option-header{
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateY(2px);
+}
+.btn-background{
+    transform: translateY(-6px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin: auto;
+    background-color: #262626ab;
+    backdrop-filter: blur(1.5rem);
+    border-radius: 6px;
+}
+.parse-hover, .download-hover, .reload-hover, .cancel-hover{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: -2;
+    border-radius: 50px;
+}
+.parse-hover{
+    background: radial-gradient( #F24848, #F2484800);
+}
+.download-hover{
+    background: radial-gradient(#94E98D,#94E98D00);
+}
+.reload-hover, .cancel-hover{
+    background: radial-gradient(#ffffff, #ffffff00);
+}
+input:hover{
+    background-color: #353535;
+}
+input:focus{
+    background-color: white;
+    border-color: #262626;
+    color: #262626;
+}
+
+.switch-toggle:hover{
+    padding: 2px;
+    height: 12px;
+    width: 28px;
+    background-color: #353535;
+}
+.switch-toggle:hover .toggle{
+    height: 8px;
+    width: 8px;
+}

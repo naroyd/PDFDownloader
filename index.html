@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <img class="status-img" src="/source/icons/File_Close.svg">
+    <p class="header">PDFDownloader</p>
+    <div>
+        <p class="status-text">Document <span class="status">unavailable for parsing and downloading or page without content</span></p>
+        <div class="parse">
+            <div class="btn-background"></div>
+            <img class="parse-icon" src="/source/icons/File_Search.svg">
+            <p class="parse-text">Parse</p>
+            <div class="parse-hover"></div>
+        </div>
+        <div class="wait">
+            <img class="wait-icon" src="/source/icons/Clock.svg">
+            <p class="wait-text">Please, wait</p>
+        </div>
+        <div class="cancel">
+            <div class="btn-background"></div>
+            <img class="cancel-icon" src="/source/icons/Close_MD.svg">
+            <p class="cancel-text">Cancel (Reload tab)</p>
+            <div class="cancel-hover"></div>
+        </div>
+        <a class="download" href="dss">
+            <div class="btn-background"></div>
+            <img class="download-icon" src="/source/icons/Download.svg">
+            <p class="download-text">Download</p>
+            <div class="download-hover"></div>
+        </a>
+        <div class="reload">
+            <div class="btn-background"></div>
+            <img class="reload-icon" src="/source/icons/Arrows_Reload.svg">
+            <p class="reload-text">Try again</p>
+            <div class="reload-hover"></div>
+        </div>
+        <div class="info">
+            <div class="attention">
+                <div class="attention-header">
+                    <img class="attention-img" src="/source/icons/Info.svg">
+                    <h2 class="attention-header-text">Attention</h2>
+                </div>
+                <p>
+                    All files are stored in your session storage. We do not upload files to the cloud because we do not consider it necessary. By continuing to work with this extension, you confirm that you are solely responsible for its use, as well as for the use, storage, distribution and publication of an unoriginal copy of someone else's copyrighted work, in accordance with all laws of your country.
+                </p>
+            </div>
+            <div class="warning">
+                <div class="warning-header">
+                    <img class="warning-img" src="/source/icons/Triangle_Warning.svg">
+                    <h2 class="warning-header-text">Please, do not any action!</h2>
+                </div>
+                <p>
+                    Our extension copy data of this site. After copying extension may "freeze" (do not worry), it will start creating your pdf file, which in the end you can download.<br/>
+                    If you hide extension or hide or close this tab extension start work incorrect!<br/>
+                    If you have done some actions, reload this tab and try again.               
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="advanced">
+        <div class="advanced-header">
+            <p>Advanced options</p>
+        </div>
+        <div>
+            <div class="option">
+                <p class="option-header">Time loading per page, ms</p>
+                <div class="option-value">
+                    <input type="number" id="time" value="200">
+                </div>
+            </div>
+            <div class="option">
+                <p class="option-header">Custom scale</p>
+                <div class="option-value">
+                    <div class="switch-toggle toggle-false">
+                        <div class="toggle"></div>
+                    </div>
+                </div>
+                <div id="toggle-status" style="display: none;">0</div>
+            </div>
+            <div class="option" id="book-format">
+                <p class="option-header">Book format, mm</p>
+                <div class="option-value">
+                    <input type="number" value="210" id="width">
+                    <p style="display: inline-block; margin: 0px 4px 0px 4px">X</p>
+                    <input type="number" value="297" id="height">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="style.js"></script>
+    <script src="bundle.js" ></script>
+</body>
+</html>
